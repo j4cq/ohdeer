@@ -1,0 +1,56 @@
+.modal-active {
+    overflow: hidden;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: @light-overlay;
+    background: @dark-overlay;
+    overflow: auto;
+    padding-top: 50px;
+    color: #fff;
+    .translateZ(0);
+    .transition(all 0.3s ease);
+}
+
+.modal--active {
+    display: block;
+}
+
+.modal--visible {
+    opacity: 1;
+}
+
+.modal__inner {
+    padding: @spacing * 2;
+}
+
+.media-small-medium() {
+    .modal__inner {
+        .vertically-centered;
+        padding: @spacing * 6;
+    }
+
+    .no-csstransforms3d& .modal__inner {
+        position: static !important;
+        .transform(none);
+        width: 100%;
+    }
+}
+
+.media-medium() {
+    .modal {
+        padding-top: 30px;
+    }
+
+    .modal__inner {
+        padding: @spacing * 8;
+    }
+}

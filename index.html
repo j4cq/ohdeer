@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="lt-ie7 no-js"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="lt-ie8 no-js"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="lt-ie9 no-js"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="lt-ie10 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <title>OhDeer Games!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <link type="text/css" rel="stylesheet" href="css/awwwards.css">
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+    <link type="text/css" rel="stylesheet" href="fonts/icon-font/css/icon-font.css">
+
+    <script src="js/libs/jquery-1.11.2.min.js"></script>
+    <script src="js/libs/modernizr.custom.99885.js"></script>
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="preloader">
+        <div class="preloader__progress">
+            <img src="images/loader.gif" alt="">
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div id="awwwards" class="honorable green top right">
+            <a href="http://www.awwwards.com" target="_blank">Awwwards</a>
+        </div>
+
+        <div class="alert alert--thank-you">
+            <i class="alert__close icon-cancel"></i>
+
+            <b>*Thank you*</b> The team has been blown away by your support and talk about our site! We never expected over 26 million hits! And to the developers, <a href="https://github.com/OhDeerGames/Farsight-Example/" target="_blank">here's how we built the site</a>. -&nbsp;ODG
+
+            <div class="fb-like" data-href="https://www.facebook.com/pages/OhDeer-Games/777336565631981" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+        </div>
+
+        <div class="alert alert--message">
+            <img src="images/deer.png" alt="" class="alert__image">
+            <span class="alert__content"></span>
+        </div>
+
+        <header class="header">
+            <a class="header__btn-menu icon icon--menu js-toggle-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+
+            <a class="header__btn-close icon icon--cancel js-modal-close">
+                <span></span>
+                <span></span>
+            </a>
+        </header>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="#start">Welcome</a></li>
+                <li><a href="#about" data-modal="about">About</a></li>
+                <li><a href="#team" data-modal="team">Team</a></li>
+                <li><a href="#portfolio" data-modal="portfolio">Portfolio</a></li>
+                <li><a href="#contact" data-modal="contact">Contact</a></li>
+                <li><a href="#end">Explore</a></li>
+            </ul>
+        </nav>
+
+        <footer class="footer">
+            &copy; <span class="current-year">2015</span> OhDeer Games! All rights reserved.
+        </footer>
+
+        <canvas id="overlay" class="overlay"></canvas>
+
+        <div id="about" class="modal">
+            <div class="modal__inner col--10of12-sm col--7of12-l text--center">
+                <h1>OhDeer Games!</h1>
+
+                <h2>OhDeer Games was first conceived in early 2012 when our lead.. person was unable to get anyone to match with him on Tinder. Or any other dating site_</h2>
+                <p>Disgruntled, he decided to try to build an iPhone game he thought of during basic training. Realizing that programming was hard, he dug through the social mire of the internet and teamed up with Henry Hardy and Paul Treloar to get things rolling. He was better as a leader than a programmer anyway_</p>
+
+                <p>With the trio complete, the boys started building fun things, and late night sessions of 'just trying one more thing' ended up with 1 completed game, 1 free to use cross platform game storage system, one client engagement analytics platform, and a patent on the previous systems_</p>
+
+                <p>As it turned out, Henry was engaged to this really awesome front end named Jaqueline Wheeler, who we were lucky enough to have jump into the pack and take over as our lead front end. She makes the web do things people think it can't do_</p>
+
+                <p>From the initial four, the team grew to incorporate a writer, a few back ends, this guy that hacked facebook twice, an android developer, a beagle, a unity developer, some front ends, and some designers. We have a team page to show everyone off_</p>
+            </div>
+        </div>
+
+        <div id="team" class="modal">
+            <div class="modal__inner col--12of12 col--10of12-l">
+                <h1 class="text--center">The team</h1>
+
+                <div class="flexslider slider--team-thumbs">
+                    <ul class="slides">
+                        <li style="background-image: url('images/team/henry.jpg');">
+                            <div class="table">
+                                <div class="table__cell slide__inner">
+                                    <h3 class="flat">Henry Hardy</h3>
+                                    <small>Technical Lead</small>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li style="background-image: url('images/team/paul.jpg');">
+                            <div class="table">
+                                <div class="table__cell slide__inner">
+                                    <h3 class="flat">Paul Treloar</h3>
+                                    <small>Managing Director</small>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li style="background-image: url('images/team/jacquie.jpg');">
+                            <div class="table">
+                                <div class="table__cell slide__inner">
+                                    <h3 class="flat">Jacqueline Wheeler</h3>
+                                    <small>Front End Lead</small>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li style="background-image: url('images/team/ruby.jpg');">
+                            <div class="table">
+                                <div class="table__cell slide__inner">
+                                    <h3 class="flat">Ruby Patton</h3>
+                                    <small>PR</small>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li style="background-image: url('images/team/brendan.jpg');">
+                            <div class="table">
+                                <div class="table__cell slide__inner">
+                                    <h3 class="flat">Brendan Scarvel</h3>
+                                    <small>Security/Hacker</small>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li style="background-image: url('images/team/rachel.jpg');">
+                            <div class="table">
+                                <div class="table__cell slide__inner">
+                                    <h3 class="flat">Rachel Smith</h3>
+                                    <small>Admin</small>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flexslider slider--team">
+                    <ul class="slides">
+                        <li>
+                            <h2 class="flat">Henry Hardy</h2>
+                            <h4>Technical Lead</h4>
+
+                            <p>Henry is a kid that likes tech. Passion about all things code related has led him to have a working understanding of lots of different things.</p>
+                            <p>He works on whatever is needed, but has a primary strength in iOS and Unity Development.</p>
+                        </li>
+
+                        <li>
+                            <h2 class="flat">Paul Treloar</h2>
+                            <h4>Managing Director</h4>
+
+                            <p>Coach and mentor Paul Treloar is passionately committed to helping others achieve their success. Not only has he been involved in many successful businesses throughout his career but he has also spent many years immersed in education and surrounded by some of the most successful and influential people in the world.</p>
+                        </li>
+
+                        <li>
+                            <h2 class="flat">Jacqueline Wheeler</h2>
+                            <h4>Front End Lead</h4>
+
+                            <p>Jacquie is responsible for anything that you see or interact with in your browser by OhDeer Games! She mainly loves to push the boundaries of front end development and work on experimental ideas, but a few years in corporate IT have taught her how to work on corporate projects, mentor people and run teams from a technical aspect.</p>
+                        </li>
+
+                        <li>
+                            <h2 class="flat">Ruby Patton</h2>
+                            <h4>PR</h4>
+
+                            <p>Ruby is a final year Bachelor of Communications student at Griffith University, majoring in both journalism and public relations. While most kids were playing in the street, Ruby was pouring out her ideas onto paper.</p>
+                        </li>
+
+                        <li>
+                            <h2 class="flat">Brendan Scarvel</h2>
+                            <h4>Security/Hacker</h4>
+
+                            <p>Brendan Scarvel can be found on the <a href="https://www.facebook.com/whitehat/thanks/" target="_blank">White Hat Wall of Fame</a> as someone who is acknowledged to have hacked facebook, responsibly. Leveraging off his ability to do this, Brendan uses his knowledge to attempt to break our systems, and then secure them against people who would attempt to do the same.</p>
+                            <p>He's also a firefighter, and a life guard.</p>
+                        </li>
+
+                        <li>
+                            <h2 class="flat">Rachel Smith</h2>
+                            <h4>Admin</h4>
+
+                            <p>Rachel takes care of the offices admin needs - be that organising prize money for DRoP winners, or field new bussines enquiries.</p>
+                            <p>She's basically the mother that keeps everything going in the background.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="portfolio" class="modal">
+            <div class="modal__inner col--10of12-sm">
+                <h1 class="text--center">Our work</h1>
+
+                <div class="flexslider slider--portfolio">
+                    <ul class="slides">
+                        <li>
+                            <img src="images/portfolio/drop.jpg" width="200" alt="" class="float--left margin-right--med margin-bottom--med">
+
+                            <h2>DRoP</h2>
+
+                            <p>DRoP was OhDeer Games first publically launched cross platform title. It was also the only (that we're aware of) game to feature a cross platform high score system that also supported doing cross platform prizes. You can find it on the app store here, or the play store here.</p>
+
+                            <p>For more information, or to check out the rankings, swing by the DRoP site here_</p>
+                        </li>
+
+                        <li>
+                            <img src="images/portfolio/ambit.jpg" width="200" alt="" class="float--left margin-right--med margin-bottom--med">
+
+                            <h2>Ambit_Score</h2>
+
+                            <p>AmBit_Score was the back end platform that we originally created to take care of the storage of high scores and rankings across our first release, DRoP. After we built it though, we realised what a great platform it was for other game developers to use for their own game backends, and have released it for free use to the public. You can get more information on AmBit_Score or sign up for AmBit_Score here_</p>
+                        </li>
+
+                        <li>
+                            <img src="images/portfolio/jdp.jpg" width="200" alt="" class="float--left margin-right--med margin-bottom--med">
+
+                            <h2>Just Digital People #Bibs game</h2>
+
+                            <p>The Just Digital People #Bibs game was a quick throw together for our friends over at JustDigitalPeople, a Brisbane based recruitment agency that has had our back through the entire process of assembeling the team that we have here today. The #Bibs app was put together for the infamous #Bibs event held and hosted bi-anually by Just Digital People. The game was used to settle many disputes surrounding the the eternal question of "Who is more boss?"</p>
+
+                            <p>Check out the JDP #Bibs Game on the app store here_</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="modal">
+            <div class="modal__inner col--8of12-sm col--7of12-l text--center">
+                <h1>Drop us a line!</h1>
+
+                <p class="larger">We love to talk, hear ideas, host hack-a-thons, sponsor people, <span class="nowrap">and just have a chat =]</span></p>
+
+                <div class="row row--sml margin-bottom--lge">
+                    <div class="col col--3of12-sm">
+                        <a href="tel:+61428577788">
+                            <span class="icon icon--lge"><i class="icon-iphone"></i></span>
+                            +61 428 577 788
+                        </a>
+                    </div>
+
+                    <div class="col col--3of12-sm">
+                        <a href="https://www.google.com.au/maps/place/Gold+Coast+QLD/" target="_blank">
+                            <span class="icon icon--lge"><i class="icon-location"></i></span>
+                            Gold Coast,<br>Australia
+                        </a>
+                    </div>
+
+                    <div class="col col--3of12-sm">
+                        <a href="https://www.facebook.com/pages/OhDeer-Games/777336565631981" target="_blank">
+                            <span class="icon icon--lge"><i class="icon-facebook"></i></span>
+                            Follow us
+                        </a>
+                    </div>
+
+                    <div class="col col--3of12-sm">
+                        <a href="https://github.com/OhDeerGames" target="_blank">
+                            <span class="icon icon--lge"><i class="icon-github"></i></span>
+                            Check out<br>our code
+                        </a>
+                    </div>
+                </div>
+
+                <form id="contact-form">
+                    <div class="row row--sml">
+                        <div class="col col--6of12-m">
+                            <input name="name" type="text" placeholder="Name" class="input" />
+
+                            <input type="text" name="email" placeholder="Email" class="input" />
+
+                            <input type="text" name="phone" placeholder="Phone" class="input" />
+                        </div>
+
+                        <div class="col col--6of12-m">
+                            <textarea name="message" placeholder="Message" class="textarea"></textarea>
+
+                            <input type="submit" class="button button--block" value="Send">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="scene">
+            <canvas id="scene-canvas" class="scene__canvas"></canvas>
+        </div>
+    </div>
+
+    <div class="depth"></div>
+
+    <script src="js/libs/viewport-units-buggyfill.js"></script>
+    <script src="js/libs/underscore-min.js"></script>
+    <script src="js/libs/pubsub.js"></script>
+    <script src="js/libs/jquery.flexslider.js"></script>
+
+    <script src="js/libs/jquery.scrollmagic.min.js"></script>
+    <script src="js/libs/jquery.scrollmagic.debug.js"></script>
+    <script src="js/libs/tweenmax.min.js"></script>
+    <script src="js/libs/tweenmax.ScrollToPlugin.min.js"></script>
+
+    <script src="js/utils.js"></script>
+    <script src="js/preloader.js"></script>
+    <script src="js/overlay.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/points.js"></script>
+    <script src="js/zoom.js"></script>
+    <script src="js/contact.js"></script>
+</body>

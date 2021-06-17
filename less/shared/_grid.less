@@ -1,0 +1,151 @@
+/*
+//  grid.less
+//  Primer
+//  https://github.com/j4cq/primer
+//
+//  Copyright (c) 2015 Jacqueline Wheeler. All rights reserved.
+//  Licensed under MIT.
+*/
+
+@columns: 12;
+
+.row {
+    .cf;
+    margin-left: -@spacing;
+    margin-right: -@spacing;
+}
+
+.col {
+    float: left;
+    width: 100%;
+    padding-left: @spacing;
+    padding-right: @spacing;
+}
+
+.row--sml {
+    margin-left: -@spacing / 2 !important;
+    margin-right: -@spacing / 2 !important;
+
+    > .col {
+        padding-left: @spacing / 2 !important;
+        padding-right: @spacing / 2 !important;
+    }
+}
+
+.row--med {
+    margin-left: -@spacing * 2;
+    margin-right: -@spacing * 2;
+
+    > .col {
+        padding-left: @spacing * 2;
+        padding-right: @spacing * 2;
+    }
+}
+
+.row--lge {
+    margin-left: -@spacing * 3;
+    margin-right: -@spacing * 3;
+
+    > .col {
+        padding-left: @spacing * 3;
+        padding-right: @spacing * 3;
+    }
+}
+
+.row--flush {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    > .col {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+.media-medium() {
+    .row {
+        margin-left: -@spacing * 2;
+        margin-right: -@spacing * 2;
+    }
+
+    .col {
+        padding-left: @spacing * 2;
+        padding-right: @spacing * 2;
+    }
+
+    .row--med {
+        margin-left: -@spacing * 3;
+        margin-right: -@spacing * 3;
+
+        > .col {
+            padding-left: @spacing * 3;
+            padding-right: @spacing * 3;
+        }
+    }
+
+    .row--lge {
+        margin-left: -@spacing * 4;
+        margin-right: -@spacing * 4;
+
+        > .col {
+            padding-left: @spacing * 4;
+            padding-right: @spacing * 4;
+        }
+    }
+}
+
+
+// column generators
+
+.createColumn(@index) when (@index >= 0) {
+    // create class
+    .col--@{index}of@{columns} {
+        width: 100% / @columns * @index;
+    }
+
+    .push--@{index}of@{columns} {
+        margin-left: 100% / @columns * @index;
+    }
+
+    // next iteration
+    .createColumn(@index - 1);
+}
+
+.createColumn(@index, @media) when (@index >= 0) {
+    // create class
+    .col--@{index}of@{columns}@{media} {
+        width: 100% / @columns * @index;
+    }
+
+    .push--@{index}of@{columns}@{media} {
+        margin-left: 100% / @columns * @index;
+    }
+
+    // next iteration
+    .createColumn(@index - 1, @media);
+}
+
+.createColumn(-1) {}
+
+// call looping mixin
+.createColumn(@columns);
+
+.media-small() {
+    .createColumn(@columns, -s);
+}
+
+.media-small-medium() {
+    .createColumn(@columns, -sm);
+}
+
+.media-medium() {
+    .createColumn(@columns, -m);
+}
+
+.media-medium-large() {
+    .createColumn(@columns, -ml);
+}
+
+.media-large() {
+    .createColumn(@columns, -l);
+}

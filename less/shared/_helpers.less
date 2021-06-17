@@ -1,0 +1,230 @@
+/*
+//  helpers.less
+//  Primer
+//  https://github.com/j4cq/primer
+//
+//  Copyright (c) 2015 Jacqueline Wheeler. All rights reserved.
+//  Licensed under MIT.
+*/
+
+// whitespace
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.flat {
+    margin-bottom: 0 !important;
+}
+
+.flush {
+    padding: 0 !important;
+}
+
+
+// generated positioning classes
+
+@positions: '', '-top', '-left', '-right', '-bottom';
+
+.createPositioning(@type) {
+    .-(@x: length(@positions)) when (@x > 0) {
+        @position: e(extract(@positions, @x));
+
+        .@{type}@{position} { @{type}@{position}: @spacing; }
+
+        .@{type}@{position}--sml { @{type}@{position}: @spacing; }
+
+        .@{type}@{position}--med { @{type}@{position}: @spacing * 2; }
+
+        .@{type}@{position}--lge { @{type}@{position}: @spacing * 3; }
+
+        @media screen and (min-width: @small-medium) {
+            .@{type}@{position} { @{type}@{position}: @spacing * 2; }
+        }
+
+        @media screen and (min-width: @medium-large) {
+            .@{type}@{position} { @{type}@{position}: @spacing * 3; }
+        }
+
+        .-((@x - 1));
+    } .-;
+}
+
+.createPositioning(margin);
+.createPositioning(padding);
+
+
+// borders
+
+@border: 1px solid @grey-light;
+
+.createBorders() {
+    .-(@x: length(@positions)) when (@x > 0) {
+        @position: e(extract(@positions, @x));
+
+        .border@{position} { border@{position}: @border; }
+
+        .no-border@{position} { border@{position}: none; }
+
+        @media screen and (min-width: @small) {
+            .border@{position}--s { border@{position}: @border; }
+
+            .no-border@{position}--s { border@{position}: none; }
+        }
+
+        @media screen and (min-width: @small-medium) {
+            .border@{position}--sm { border@{position}: @border; }
+
+            .no-border@{position}--sm { border@{position}: none; }
+        }
+
+        @media screen and (min-width: @medium) {
+            .border@{position}--m { border@{position}: @border; }
+
+            .no-border@{position}--m { border@{position}: none; }
+        }
+
+        @media screen and (min-width: @medium-large) {
+            .border@{position}--ml { border@{position}: @border; }
+
+            .no-border@{position}--ml { border@{position}: none; }
+        }
+
+        @media screen and (min-width: @large) {
+            .border@{position}--l { border@{position}: @border; }
+
+            .no-border@{position}--l { border@{position}: none; }
+        }
+
+        @media screen and (min-width: @extra-large) {
+            .border@{position}--xl { border@{position}: @border; }
+
+            .no-border@{position}--xl { border@{position}: none; }
+        }
+
+        .-((@x - 1));
+    } .-;
+}
+
+.createBorders();
+
+
+// floats
+
+.float--left {
+    float: left;
+}
+
+.float--right {
+    float: right;
+}
+
+
+// pinning
+
+.pin--left {
+    position: absolute;
+    left: 0;
+}
+
+.pin--right {
+    position: absolute;
+    right: 0;
+}
+
+
+// text alignment
+
+.text--left {
+    text-align: left !important;
+}
+
+.text--center {
+    text-align: center !important;
+}
+
+.text--right {
+    text-align: right !important;
+}
+
+
+// indentation
+
+.indent {
+    padding-left: @spacing * 3;
+}
+
+.indent--2 {
+    padding-left: @spacing * 6;
+}
+
+
+// vertical alignment
+
+.vertical--top {
+    vertical-align: top;
+}
+
+.vertical--center {
+    vertical-align: middle;
+}
+
+.vertical--bottom {
+    vertical-align: bottom;
+}
+
+.relative {
+    position: relative;
+}
+
+.vertically-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    .translate(-50%, -50%);
+}
+
+
+// text
+
+.noclick {
+    pointer-events: none;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.wrap {
+    white-space: normal;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+// table display
+
+.table {
+    display: table;
+}
+
+.table__cell {
+    display: table-cell;
+}

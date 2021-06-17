@@ -1,0 +1,77 @@
+/*
+//  media.less
+//  Primer
+//  https://github.com/j4cq/primer
+//
+//  Copyright (c) 2015 Jacqueline Wheeler. All rights reserved.
+//  Licensed under MIT.
+*/
+
+.media {
+    display: table;
+    width: 100%;
+}
+
+.media--auto {
+    width: auto;
+}
+
+.media__item,
+.media__body {
+    display: table-cell;
+    vertical-align: top;
+
+    .media--middle & {
+        vertical-align: middle;
+    }
+
+    .media--bottom & {
+        vertical-align: bottom;
+    }
+}
+
+.media__item {
+    .media--x-sml & {
+        padding-right: @spacing / 4;
+    }
+
+    .media--sml & {
+        padding-right: @spacing / 2;
+    }
+
+    .media--med & {
+        padding-right: @spacing;
+    }
+
+    .media--lge & {
+        padding-right: @spacing * 2;
+    }
+
+    .media__body + & {
+        padding-right: 0;
+
+        .media--x-sml & {
+            padding-left: @spacing / 4;
+        }
+
+        .media--sml & {
+            padding-left: @spacing / 2;
+        }
+
+        .media--med & {
+            padding-left: @spacing;
+        }
+
+        .media--lge & {
+            padding-left: @spacing * 2;
+        }
+    }
+}
+
+.media__body {
+    width: 100%;
+
+    .media--auto & {
+        width: auto;
+    }
+}

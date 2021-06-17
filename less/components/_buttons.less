@@ -1,0 +1,45 @@
+/*
+//  buttons.less
+//  Primer
+//  https://github.com/j4cq/primer
+//
+//  Copyright (c) 2015 Jacqueline Wheeler. All rights reserved.
+//  Licensed under MIT.
+*/
+
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    padding: 0 @spacing * 4;
+    background: none;
+    border: 2px solid;
+    .border-radius(0);
+    outline: none;
+    .no-tap-highlight();
+    -webkit-appearance: none;
+    font-family: inherit;
+    font-size: inherit;
+    text-transform: uppercase;
+    font-weight: @semibold-weight;
+    line-height: inherit;
+    text-decoration: none;
+    color: inherit;
+    .font-smoothing;
+    text-align: center;
+    cursor: pointer;
+    .transition(all 0.2s ease);
+
+    &:hover {
+        background-color: @primary;
+        border-color: @primary;
+        color: @grey;
+    }
+}
+
+.button--block {
+    display: block;
+    width: 100%;
+}

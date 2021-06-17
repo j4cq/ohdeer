@@ -1,0 +1,67 @@
+/*
+//  forms.less
+//  Primer
+//  https://github.com/j4cq/primer
+//
+//  Copyright (c) 2015 Jacqueline Wheeler. All rights reserved.
+//  Licensed under MIT.
+*/
+
+.input,
+.select,
+.textarea {
+    display: block;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 50px;
+    width: 100%;
+    margin: 0 0 @spacing;
+    padding: 0 @spacing * 2;
+    background: @light-overlay;
+    .border-radius(0);
+    border: none;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    text-align: left;
+    color: @grey;
+}
+
+.textarea {
+    height: 110px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    resize: none;
+}
+
+.select {
+    cursor: pointer;
+    background-image: url('../img/select-arrow.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+    padding-right: @spacing * 3;
+}
+
+// placeholders
+::-webkit-input-placeholder { color: @grey; }
+
+:-moz-placeholder { color: @grey; }
+
+::-moz-placeholder { color: @grey; }
+
+:-ms-input-placeholder { color: @grey; }
+
+.validation {
+    // position: absolute;
+    display: block;
+    padding: @spacing @spacing * 2;
+    font-size: 0.8em;
+    margin: -@spacing 0 @spacing;
+    background: @grey;
+    color: #f00;
+    text-align: left;
+}

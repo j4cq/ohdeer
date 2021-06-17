@@ -1,0 +1,116 @@
+{
+  "name": "icon-font",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "850ed32ee0f5104a4e425131af5bdcfa",
+      "css": "cancel",
+      "code": 59399,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M509.7 428.1L197 115.4 115.4 197 428.1 509.7 115.4 822.5 197 904.1 509.7 591.3 822.5 904.1 904.1 822.5 591.3 509.7 904.1 197 822.5 115.4 509.7 428.1 509.7 428.1Z",
+        "width": 1000
+      },
+      "search": [
+        "cancel"
+      ]
+    },
+    {
+      "uid": "e9fbcc244d01557a08355abd68f6e4ab",
+      "css": "down",
+      "code": 59398,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M800.7 299L877.7 375.9 510.5 743 143.3 375.9 220.3 299 510.5 589.2 800.7 299 800.7 299Z",
+        "width": 1000
+      },
+      "search": [
+        "down"
+      ]
+    },
+    {
+      "uid": "0d2bd951a9ddb92379790e716ee1deb5",
+      "css": "left",
+      "code": 59396,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M713.3 792L636.4 868.9 269.2 501.8 636.4 134.6 713.3 211.5 423.1 501.8 713.3 792 713.3 792Z",
+        "width": 1000
+      },
+      "search": [
+        "left"
+      ]
+    },
+    {
+      "uid": "bd53305f692db0239a1ac4da8a52d370",
+      "css": "right",
+      "code": 59394,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M307.7 211.5L384.6 134.6 751.8 501.8 384.6 868.9 307.7 792 597.9 501.8 307.7 211.5 307.7 211.5Z",
+        "width": 1000
+      },
+      "search": [
+        "right"
+      ]
+    },
+    {
+      "uid": "a931ca646f63b445a9f5570761ac82c1",
+      "css": "up",
+      "code": 59393,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M220.3 704.6L143.3 627.7 510.5 260.5 877.7 627.7 800.7 704.6 510.5 414.3 220.3 704.6 220.3 704.6Z",
+        "width": 1000
+      },
+      "search": [
+        "up"
+      ]
+    },
+    {
+      "uid": "9dd9e835aebe1060ba7190ad2b2ed951",
+      "css": "search",
+      "code": 59400,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "8e04c98c8f5ca0a035776e3001ad2638",
+      "css": "facebook",
+      "code": 59403,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "0f6a2573a7b6df911ed199bb63717e27",
+      "css": "github",
+      "code": 59401,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "627abcdb627cb1789e009c08e2678ef9",
+      "css": "twitter",
+      "code": 59397,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "22cfc7af2c4f158b37317c65c92b48c2",
+      "css": "location",
+      "code": 59392,
+      "src": "elusive"
+    },
+    {
+      "uid": "babd288a0685a4b701a934fd40679a80",
+      "css": "iphone",
+      "code": 59395,
+      "src": "elusive"
+    }
+  ]
+}
